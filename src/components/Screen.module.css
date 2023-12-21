@@ -1,0 +1,8 @@
+.screen{
+    display: flex;
+    width: 700px;
+    height: 100vh;
+    background-color: #323232;
+    align-items: flex-end;
+    gap: 1px;
+}
