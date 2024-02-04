@@ -28,3 +28,23 @@ export const bubbleSort = (arr: number[]) => {
     return arr;
 }
 
+export const selectionSort = (arr: number[]) => {
+    for (let i = 0; i < arr.length; i++) {
+        let minValue!: number;
+        let minValueIndex:number = i;
+
+        for (let k = i; k < arr.length; k++) {
+            if (typeof minValue === 'undefined') {
+                minValue = arr[k];
+            } else if (minValue > arr[k]) {
+                minValue = arr[k];
+                minValueIndex = k;
+            }
+        }
+
+
+        const temp = arr[i];
+        arr[i] = minValue;
+        arr[minValueIndex] = temp;
+    }
+}
